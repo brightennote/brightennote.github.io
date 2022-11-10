@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     activesupport (6.0.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -261,4 +261,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.3.25
+   2.3.7
