@@ -1,7 +1,6 @@
 ---
 layout: single
 title:  "Welcome to Jekyll!"
-date:   2022-11-09 20:29:12 +0900
 categories: jekyll update
 ---
 
