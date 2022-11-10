@@ -288,7 +288,6 @@ defaults:
       type: posts
     values:
       # show_date: true
-      date_format: "%Y-%m-%d" # default "%B %-d, %Y"
       layout: single
       author_profile: true
       # read_time: true
@@ -308,3 +307,10 @@ defaults:
       type: category
     values:
       comments: false
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      sidebar:
+        nav: "docs"

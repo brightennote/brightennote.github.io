@@ -10,3 +10,27 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: Getting Started
+    children:
+      - title: "Quick-Start Guide"
+        url: /docs/quick-start-guide/
+
+
+  - title: Customization
+    children:
+      - title: "Configuration"
+        url: /docs/configuration/
+
+
+  - title: Content
+    children:
+      - title: "Working with Posts"
+        url: /docs/posts/
+
+
+  - title: Extras
+    children:
+      - title: "Stylesheets"
+        url: /docs/stylesheets/
