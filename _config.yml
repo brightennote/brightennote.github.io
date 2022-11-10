@@ -15,12 +15,12 @@ remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "Why not 👀?"
 title_separator          : "-"
 subtitle                 : "우당탕탕 저장소🙋‍♂️" # site tagline that appears below site title in masthead
 name                     : "Brighten Park"
-description              : "Happy Archive"
+description              : "데이터센터 GNOC의 개발 여행기"
 url                      : "https://brightennote.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "brightennote/brightennote.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -60,9 +60,9 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
@@ -105,15 +105,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  name             : "Brighten Park"
+  avatar           : "https://avatars.githubusercontent.com/u/95958561?s=400&u=b1468186634ab787f9aa096c9593782e9e1a4454&v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "⚽💻🎮✈🌇"
+  location         : "Anyang-si"
   email            :
   links:
-    - label: "Email"
+    - label: "dys01130@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailTo:dys01130@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -125,10 +125,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/brightennote/brightennote.github.io"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/jjihyeon2/"
 
 # Site Footer
 footer:
@@ -219,9 +219,9 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:categories/:title
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /page:num
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -232,6 +232,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -253,22 +254,22 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
@@ -286,9 +287,24 @@ defaults:
       path: ""
       type: posts
     values:
+      show_date: true
+      date_format: "%Y-%m-%d" # default "%B %-d, %Y"
       layout: single
       author_profile: true
-      read_time: true
+      # read_time: true
       comments: true # true
-      share: true
-      related: true
+      toc: true
+      # share: true
+      # related: true
+      category_nav: true
+  # tag & category
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
