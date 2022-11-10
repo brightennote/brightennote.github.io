@@ -296,6 +296,7 @@ defaults:
       # share: true
       # related: true
       category_nav: true
+      sidebar_main: true
   # tag & category
   - scope:
       path: ""
@@ -308,9 +309,9 @@ defaults:
     values:
       comments: false
   # _docs
-  - scope:
-      path: ""
-      type: docs
-    values:
-      sidebar:
-        nav: "docs"
+#  - scope:
+#      path: ""
+#      type: docs
+#    values:
+#      sidebar:
+#        nav: "docs"
