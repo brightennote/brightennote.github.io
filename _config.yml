@@ -197,7 +197,6 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-asset_url: /assets
 
 
 # Markdown Processing
@@ -297,6 +296,7 @@ defaults:
       # related: true
       category_nav: true
       sidebar_main: true
+      asset_url: /assets
   # tag & category
   - scope:
       path: ""
