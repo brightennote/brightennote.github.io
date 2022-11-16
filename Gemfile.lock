@@ -261,6 +261,7 @@ DEPENDENCIES
   github-pages
   jekyll-archives
   jekyll-include-cache
+  jemoji
   webrick (~> 1.7)
 
 BUNDLED WITH
